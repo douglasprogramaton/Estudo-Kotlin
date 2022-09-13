@@ -1,5 +1,5 @@
 CREATE TABLE purchase(
-	id int  primary key,
+	id serial primary key NOT NULL,
     customer_id int not null,
     nfe varchar(255),
     price DECIMAL(15,2) not null,

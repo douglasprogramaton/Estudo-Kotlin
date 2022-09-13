@@ -1,5 +1,5 @@
 CREATE TABLE book(
-	id int  primary key,
+	id serial  primary key NOT NULL,
     name varchar(255) not null,
     price decimal(10,2) not null,
     status varchar(255) not null,
