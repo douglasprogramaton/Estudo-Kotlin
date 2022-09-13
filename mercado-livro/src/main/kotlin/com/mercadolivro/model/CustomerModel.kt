@@ -1,6 +1,7 @@
 package com.mercadolivro.model
 
 import com.mercadolivro.enuns.CustomerStatus
+import com.mercadolivro.enuns.Profile
 import org.hibernate.Hibernate
 import javax.persistence.*
 
@@ -17,7 +18,16 @@ data class CustomerModel(
 
     @Column
     @Enumerated(EnumType.STRING)
-    var status: CustomerStatus
+    var status: CustomerStatus,
+
+    @Column
+    val password: String,
+    @Column(name="role")
+    @Enumerated(EnumType.STRING)
+    @CollectionTable(name= "customer_roles", joinColumns = [JoinColumn(name= "customer_id")] )
+    @ElementCollection(targetClass = Profile::class, fetch = FetchType.EAGER)
+
+    var roles: Set<Profile> = setOf()
   ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

@@ -18,7 +18,7 @@ val customer: CustomerModel,
 @JoinTable(name="purchase_book",
     joinColumns = [JoinColumn(name="purchase_id")],
 inverseJoinColumns = [JoinColumn(name="book_id")])
-var books: List<BookModel>,
+var books: MutableList<BookModel>,
 
 val nfe:String?=null,
 
