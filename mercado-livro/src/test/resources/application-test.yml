@@ -1,6 +1,11 @@
 spring:
   profiles:
-    active: dev
+    active: test
+    datasource:
+      url: jdbc:postgresql://localhost:5432/mercadolivrotest?createDataBaseIfNotExist=true
+      username: postgres
+      password: Douglas12957534@
+
   jpa:
     hibernate:
     ddl-auto: update
