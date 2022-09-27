@@ -42,7 +42,7 @@ class SecurityConfig(
             "/Admin/**"
     )
     private val PUBLIC_GET_MATCHERS = arrayOf(
-            "/books"
+            "/books","userId"
     )
     override fun configure(auth: AuthenticationManagerBuilder) {
         auth.userDetailsService(userDetails).passwordEncoder(bCryptPasswordEncoder())
