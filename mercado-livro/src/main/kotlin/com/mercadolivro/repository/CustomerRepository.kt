@@ -18,6 +18,4 @@ interface CustomerRepository : CrudRepository<CustomerModel, Int>, JpaSpecificat
     )
     fun listByCustomerId(@Param("id") id: Int): Optional<CustomerModel>
 
-
-
 }
