@@ -26,6 +26,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation("org.springframework.kafka:spring-kafka:2.9.2")
+	implementation("java -javaagent:/path/to/dd-java-agent.jar -Ddd.logs.injection=true -jar path/to/your/app.jar")
 
 
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")

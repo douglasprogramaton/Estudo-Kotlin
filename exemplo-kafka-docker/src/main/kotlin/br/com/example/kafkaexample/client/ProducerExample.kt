@@ -45,7 +45,7 @@ fun main() {
     kafkaProducer.use { producer ->
         repeat(numMessages) { i ->
             val key = null
-            val record = "teste"
+            val record = "Application Manegement Develloper"
             println("Producing record: $key\t$record")
 
             producer.send(ProducerRecord(TOPIC, key, record)) { m: RecordMetadata, e: Exception? ->
